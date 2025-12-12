@@ -27,6 +27,8 @@ import {
   NotificationOutline,
   MenuOutline
 } from '@ant-design/icons-angular/icons';
+import { provideTranslocoPersistLang } from '@jsverse/transloco-persist-lang';
+import { provideTranslocoPreloadLangs } from '@jsverse/transloco-preload-langs';
 
 const icons = [
   MenuFoldOutline,
@@ -72,5 +74,11 @@ export const appConfig: ApplicationConfig = {
       },
       loader: TranslocoHttpLoader
     }),
+    provideTranslocoPersistLang({
+      storage: {
+        useValue: localStorage,
+      },
+    }),
+    // provideTranslocoPreloadLangs({ langs: ['en', 'ar'] })
   ],
 };

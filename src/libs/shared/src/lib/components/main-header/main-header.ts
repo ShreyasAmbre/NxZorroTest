@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input } from '@angular/core';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { CommonModule } from '@angular/common';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
@@ -8,6 +8,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { LanguageService } from '../../services';
 
 @Component({
   selector: 'shared-main-header',
@@ -29,8 +30,10 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 export class MainHeader {
   @Input() isArabic = false;
 
+  #languageService = inject(LanguageService);
+
   isMobileMenuOpen = false;
-  currentLang = 'en'
+  lang = this.#languageService
 
 
   onLanguageToggle(lang: string) {

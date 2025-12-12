@@ -12,10 +12,17 @@
     </div>
 
     <div class="right-section">
-        <nz-select ngModel="en">
+        <!-- <nz-select ngModel="en">
             <nz-option nzValue="en" nzLabel="English"></nz-option>
             <nz-option nzValue="ar" nzLabel="Arabic"></nz-option>
-        </nz-select>
+        </nz-select> -->
+        <nz-switch
+            [ngModel]="lang.currentLang() === 'ar'"
+            nzCheckedChildren="AR"
+            nzUnCheckedChildren="EN"
+            (ngModelChange)="lang.toggleLanguage()"
+            class="blue-switch">
+            </nz-switch>
         <button nz-button nzShape="circle" nzType="default" class="profile-btn">
             <i nz-icon nzType="user"></i>
         </button>
