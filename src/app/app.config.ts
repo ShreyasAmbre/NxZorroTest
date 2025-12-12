@@ -11,7 +11,7 @@ import { provideTransloco, TranslocoModule } from '@jsverse/transloco';
 import { NZ_I18N, en_US, ar_EG } from 'ng-zorro-antd/i18n';
 import { NzConfig, NZ_CONFIG } from 'ng-zorro-antd/core/config';
 import { provideHttpClient } from '@angular/common/http';
-import { TranslocoHttpLoader } from './transloco-loader';
+import { TranslocoHttpLoader } from '@nx-zorro-test/core';
 
 const ngZorroConfig: NzConfig = {
   theme: {
