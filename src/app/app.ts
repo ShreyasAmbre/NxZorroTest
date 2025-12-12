@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @Component({
-  imports: [NxWelcome, RouterModule],
+  imports: [
+    RouterModule,
+    NzButtonModule    
+  ],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  protected title = 'NxZorroTest';
 }
