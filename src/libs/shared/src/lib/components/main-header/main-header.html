@@ -1,0 +1,32 @@
+<nz-header class="app-header">
+
+    <div class="left-section">
+        <div class="logo">
+            <img src="assets/images/ipsum-logo.svg" alt="logo" />
+        </div>
+        <ul nz-menu nzMode="horizontal" class="header-menu desktop-menu">
+            <li nz-menu-item routerLink="/dashboard" routerLinkActive="ant-menu-item-selected">
+                Dashboard
+            </li>
+        </ul>
+    </div>
+
+    <div class="right-section">
+        <nz-select ngModel="en">
+            <nz-option nzValue="en" nzLabel="English"></nz-option>
+            <nz-option nzValue="ar" nzLabel="Arabic"></nz-option>
+        </nz-select>
+        <button nz-button nzShape="circle" nzType="default" class="profile-btn">
+            <i nz-icon nzType="user"></i>
+        </button>
+        <button nz-button nzType="text" class="mobile-toggle" (click)="isMobileMenuOpen = !isMobileMenuOpen">
+            <i nz-icon nzType="menu"></i>
+        </button>
+    </div>
+</nz-header>
+
+<ul nz-menu nzMode="inline" class="mobile-menu" *ngIf="isMobileMenuOpen">
+    <li nz-menu-item routerLink="/dashboard" routerLinkActive="ant-menu-item-selected">
+        Dashboard
+    </li>
+</ul>

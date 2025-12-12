@@ -1,0 +1,111 @@
+.app-header {
+  height: 64px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7ec;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    .logo img {
+      height: 32px;
+    }
+
+    .desktop-menu {
+      background: transparent !important;
+      border-bottom: none !important;
+
+      .ant-menu-item {
+        font-size: 14px;
+        font-weight: 500;
+        color: #333 !important;
+
+        &:hover {
+          background: #f5f7fa !important;
+        }
+
+        &.ant-menu-item-selected {
+          color: #4b6bfb !important;
+          border-bottom: 2px solid #4b6bfb !important;
+        }
+      }
+    }
+  }
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .profile-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-toggle {
+      display: none;
+    }
+  }
+}
+
+/* ---------------------------------- */
+/* MOBILE RESPONSIVE                  */
+/* ---------------------------------- */
+
+@media (max-width: 768px) {
+  .app-header {
+    .desktop-menu {
+      display: none !important;
+    }
+
+    .right-section {
+      .mobile-toggle {
+        display: inline-flex !important;
+      }
+
+      .language-toggle {
+        display: flex;
+        gap: 6px;
+            .lang-btn {
+                background: #4b6bfb !important;
+                border-color: #4b6bfb !important;
+                color: #ffffff !important;
+                font-weight: 500;
+                padding: 2px 10px;
+                border-radius: 6px;
+
+                &.active {
+                font-weight: 700; // Highlight selected
+                opacity: 1;
+                }
+
+                &:not(.active) {
+                opacity: 0.7; // Slightly faded unselected
+                }
+            }
+        }
+
+    }
+  }
+
+  .mobile-menu {
+    display: block;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7ec;
+
+    .ant-menu-item {
+      padding: 14px 20px;
+      font-size: 15px;
+    }
+  }
+}

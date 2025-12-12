@@ -12,6 +12,36 @@ import { NZ_I18N, en_US, ar_EG } from 'ng-zorro-antd/i18n';
 import { NzConfig, NZ_CONFIG } from 'ng-zorro-antd/core/config';
 import { provideHttpClient } from '@angular/common/http';
 import { TranslocoHttpLoader } from '@nx-zorro-test/core';
+import { NZ_ICONS } from 'ng-zorro-antd/icon';
+import {
+  MenuFoldOutline,
+  MenuUnfoldOutline,
+  DashboardOutline,
+  UserOutline,
+  SettingOutline,
+  LogoutOutline,
+  BellOutline,
+  HomeOutline,
+  LaptopOutline,
+  GlobalOutline,
+  NotificationOutline,
+  MenuOutline
+} from '@ant-design/icons-angular/icons';
+
+const icons = [
+  MenuFoldOutline,
+  MenuUnfoldOutline,
+  DashboardOutline,
+  UserOutline,
+  SettingOutline,
+  LogoutOutline,
+  BellOutline,
+  HomeOutline,
+  LaptopOutline,
+  GlobalOutline,
+  NotificationOutline,
+  MenuOutline
+];
 
 const ngZorroConfig: NzConfig = {
   theme: {
@@ -28,6 +58,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     { provide: NZ_CONFIG, useValue: ngZorroConfig },
     { provide: NZ_I18N, useValue: en_US },
+    { provide: NZ_ICONS, useValue: icons },
     provideTransloco({
       config: {
         availableLangs: ['en', 'ar'],
