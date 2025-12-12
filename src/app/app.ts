@@ -4,8 +4,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @Component({
   imports: [
-    RouterModule,
-    NzButtonModule    
+    RouterModule    
   ],
   selector: 'app-root',
   templateUrl: './app.html',

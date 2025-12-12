@@ -9,7 +9,13 @@
     "baseUrl": ".",
     "paths": {
       "@nx-zorro-test/core": ["src/libs/core/src/index.ts"],
-      "@nx-zorro-test/shared": ["src/libs/shared/src/index.ts"]
+      "@nx-zorro-test/shared": ["src/libs/shared/src/index.ts"],
+      "@nx-zorro-test/features/feature-shell": [
+        "src/libs/features/feature-shell/src/index.ts"
+      ],
+      "@nx-zorro-test/features/feature-dashboard": [
+        "src/libs/features/feature-dashboard/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -4,7 +4,7 @@
   "sourceRoot": "src/libs/core/src",
   "prefix": "core",
   "projectType": "library",
-  "tags": [],
+  "tags": ["type:feature", "scope:core"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
